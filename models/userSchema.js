@@ -73,7 +73,7 @@ const userSchema = new mongoose.Schema({
 //we are hashing the password
 
 userSchema.pre('save', async function(next){
-    console.log("hi from inside");
+    // console.log("hi from inside");
 
     if(this.isModified('password')){
     
