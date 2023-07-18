@@ -17,10 +17,7 @@ require('./db/connection');
 app.use(require('./router/auth'));
 app.use(express.json());
 app.use(cookieParser());
-// app.use(cors({
-//   origin: 'http://localhost:3000', // Replace with your frontend URL
-//   credentials: true,
-// }));
+
 
 app.use(express.urlencoded({ extended: true }));
 
