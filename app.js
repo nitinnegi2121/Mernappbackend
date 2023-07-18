@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
-const cors = require('cors');
+// const cors = require('cors');
 
 
 const app = express();
@@ -17,10 +17,10 @@ require('./db/connection');
 app.use(require('./router/auth'));
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: 'http://localhost:3000', // Replace with your frontend URL
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: 'http://localhost:3000', // Replace with your frontend URL
+//   credentials: true,
+// }));
 
 app.use(express.urlencoded({ extended: true }));
 
